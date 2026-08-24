@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>Mini<span>Market</span></h2>
+
+    <div>
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Signup</button>
+        <button id="addBtn">+ Add Product</button>
+        <button id="logoutBtn" class="hidden">Logout</button>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section class="hero">
+    <h1>Find What You <span>Love</span></h1>
+    <p>Buy and sell products easily with Mini Marketplace.</p>
+    <button id="heroAdd">Sell Your Product</button>
+</section>
+
+<!-- PRODUCTS -->
+<section class="container">
+    <div class="heading">
+        <h2>Latest Products 🛍️</h2>
+        <p>Explore products from our marketplace</p>
+    </div>
+
+    <div id="products" class="products"></div>
+</section>
+
+<!-- AUTH -->
+<div id="auth" class="modal hidden">
+    <div class="card">
+
+        <span id="closeAuth">✕</span>
+
+        <div id="loginBox">
+            <h2>Welcome Back 👋</h2>
+
+            <input id="loginEmail" type="email" placeholder="Email">
+            <input id="loginPassword" type="password" placeholder="Password">
+
+            <button onclick="loginUser()" id="doLogin">Login</button>
+
+            <p>Don't have an account?
+                <b id="goSignup">Signup</b>
+            </p>
+        </div>
+
+        <div id="signupBox" class="hidden">
+            <h2>Create Account 🚀</h2>
+
+            <input id="name" placeholder="Name">
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <input id="confirmPassword" type="password"
+                   placeholder="Confirm Password">
+
+            <button id="doSignup">Signup</button>
+
+            <p>Already have an account?
+                <b id="goLogin">Login</b>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- ADD PRODUCT -->
+<div id="productModal" class="modal hidden">
+    <div class="card">
+        <span id="closeProduct">✕</span>
+
+        <h2>Add Product 📦</h2>
+
+        <input id="productName" placeholder="Product Name">
+        <input id="productPrice" type="number" placeholder="Price">
+        <input id="productImage" placeholder="Image URL">
+        <input id="productDescription" placeholder="Description">
+        <input id="productCategory" placeholder="Category">
+
+        <button id="saveProduct">Add Product</button>
+    </div>
+</div>
+
+<p id="message"></p>
+
+<script src="frontend.js"></script>
+</body>
+</html>
